@@ -1,0 +1,8 @@
+services:
+  postgres:
+    image: postgres:15
+      volumes:
+            pgdata:/var/lib/postgres
+            ./data:/app/data
+            ./sql:/app/sql
+    networks: 

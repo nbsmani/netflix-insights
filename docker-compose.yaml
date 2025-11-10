@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:15
+    volumes:
+      - pgdata:/var/lib/postgres/data
+      - ./data:/app/data
+      - ./sql:/app/sql
+    networks:
+      - data-net
+    environment:
+      POSTGRES_DB: netflix-titles
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: secret
+    ports: 
+    - 5432:5432
+
+volumes:
+  pgdata:
+
+networks:
+  data-net:
+    driver: bridge
