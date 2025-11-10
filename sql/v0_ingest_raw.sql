@@ -17,4 +17,4 @@
  	description	TEXT
  	);
  -- Client-side load (you run via psql)
-\COPY raw.netflix_titles FROM '/app/data/netflix_titles.csv' DELIMITER ',' CSV HEADER;
+\COPY raw.netflix_titles FROM '/app/data/raw/netflix-titles.csv' DELIMITER ',' CSV HEADER;
