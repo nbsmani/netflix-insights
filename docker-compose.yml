@@ -3,7 +3,7 @@ services:
     image: postgres:15
     volumes:
       - pgdata:/var/lib/postgres/data
-      - ./data:/app/data
+      - ./data/raw:/app/data/raw:ro
       - ./sql:/app/sql
     networks:
       - data-net
