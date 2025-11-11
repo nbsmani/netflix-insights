@@ -15,3 +15,5 @@ CREATE TABLE stg.netflix_titles (
     listed_in TEXT,
     description TEXT
 );
+
+\COPY stg.netflix_titles FROM '/app/data/raw/netflix-titles.csv' DELIMITER ',' CSV HEADER;
